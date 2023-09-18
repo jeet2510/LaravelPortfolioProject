@@ -2,29 +2,7 @@
 @section('content')
 <div class="container-fluid">
         <div class="row">
-            <!-- Sidebar -->
-            <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-white">
-                <div class="position-sticky">
-                    <ul class="nav flex-column">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#">
-                                Dashboard
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('users.index')}}">
-                                Users
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                Products
-                            </a>
-                        </li>
-                        <!-- Add more sidebar items as needed -->
-                    </ul>
-                </div>
-            </nav>
+            @include('dashboard.sidebar')
             
             <!-- Main content area -->
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
@@ -37,6 +15,7 @@
                         <div class="col-md-12">
                             <h2>Welcome to your dashboard!</h2>
                             <!-- Add your content here -->
+                            <p>This is only for <strong>Laravel</strong> practice only!</p>
                         </div>
                     </div>
                 </div>
