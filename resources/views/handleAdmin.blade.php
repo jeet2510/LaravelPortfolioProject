@@ -15,7 +15,8 @@
                         <div class="col-md-12">
                             <h2>Welcome to your dashboard!</h2>
                             <!-- Add your content here -->
-                            <p>This is only for <strong>Laravel</strong> practice only!</p>
+                            <p>This is for <strong>Laravel</strong> practice only!</p>
+                            <p>You can explore more go ahead!</p>
                         </div>
                     </div>
                 </div>

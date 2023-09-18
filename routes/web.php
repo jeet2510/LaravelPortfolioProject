@@ -24,6 +24,7 @@ Auth::routes();
 Route::get('admin/home',[HomeController::class, 'handleAdmin'])->name('admin.route')->middleware('admin');
 Route::get('/home', [HomeController::class, 'index'])->name('users.home');
 
+route::group(['middleware' => ('admin')], function(){
 Route::get('/users', [UsersController::class, 'index'])->name('users.index');
 Route::post('/users/store', [UsersController::class, 'store'])->name('users.store');
 Route::patch('/users/{id}/update-role', [UsersController::class, 'updateRole'])->name('users.update.role');
@@ -36,3 +37,4 @@ Route::put('users/{id}', [UsersController::class, 'update'])->name('users.update
 Route::get('/data-operation', [DataOperationController::class, 'index'])->name('dataOpration.index');
 Route::get('/user-excel-download', [DataOperationController::class, 'get_user_data'])->name('users.excel');
 Route::get('/user-pdf-download', [DataOperationController::class, 'createPDF'])->name('users.pdf');
+});
