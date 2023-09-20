@@ -36,5 +36,6 @@
 
             <button type="submit" class="btn btn-primary">Create</button>
         </form>
+        <a href="{{ route('create.ticket') }}" class="btn btn-success mt-3">Want to Request Ticket?</a>
     </div>
 @endsection

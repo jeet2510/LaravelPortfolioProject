@@ -16,6 +16,11 @@
                                 Data operations
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('admin.ticket')}}">
+                                Ticket Requests
+                            </a>
+                        </li>
                         <!-- Add more sidebar items as needed -->
                     </ul>
                 </div>
