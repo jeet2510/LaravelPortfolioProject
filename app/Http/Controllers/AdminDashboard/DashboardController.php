@@ -1,39 +1,18 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\AdminDashboard;
 
-use App\Models\User;
 use Illuminate\Http\Request;
+use App\Models\User;
+use App\Http\Controllers\Controller;
 use Redirect,Response;
 use DB;
 use Carbon\Carbon;
-
-class HomeController extends Controller
+class DashboardController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
+    public function dashboardChart()
     {
-        $this->middleware('auth');
-    }
-
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
-    public function index()
-    {   
-        if(auth()->user()->role == 'admin'){
-            return view('handleAdmin');
-        }
-        return view('home');
-    }
-    public function handleAdmin()
-    {   
+ 
         $record = User::select(\DB::raw("COUNT(*) as count"), \DB::raw("DAYNAME(created_at) as day_name"), \DB::raw("DAY(created_at) as day"))
             ->where('created_at', '>', Carbon::today()->subDay(6))
             ->groupBy('day_name','day')
@@ -48,7 +27,6 @@ class HomeController extends Controller
             }
         
             $data['chart_data'] = json_encode($data);
-            
-        return view('handleAdmin', $data);
-    }  
+            return $data;
+    }
 }

@@ -24,7 +24,6 @@ class UsersController extends Controller
                 'email' => 'required|email|unique:users|max:255',
                 'status' => 'required|in:active,inactive'
             ]);
-    
             $user = new User;
             $user->name = $request->input('name');
             $user->email = $request->input('email');
@@ -33,7 +32,7 @@ class UsersController extends Controller
             $user->role = 'user';
             $user->save();
     
-            return redirect()->route('users.home')->with('success', 'User created successfully.');
+            return redirect()->route('home')->with('success', 'User created successfully.');
         }
     }
 
