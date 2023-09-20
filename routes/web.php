@@ -35,7 +35,6 @@ Route::group(['middleware' => ('admin')], function(){
 Route::group(['prefix' => 'admin'], function(){
 Route::get('/tickets', [TicketsController::class, 'index'])->name('admin.ticket');
 Route::post('/close_ticket/{ticket_id}', [TicketsController::class, 'close'])->name('admin.close');
-Route::get('chart-js', [DashboardController::class, 'dashboardChart']);
 });
 
 Route::group(['prefix' =>'users'], function(){

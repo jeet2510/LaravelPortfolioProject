@@ -25,7 +25,6 @@ class DashboardController extends Controller
                 $data['label'][] = $row->day_name;
                 $data['data'][] = (int) $row->count;
             }
-        
             $data['chart_data'] = json_encode($data);
             return $data;
     }

@@ -12,16 +12,20 @@
                 <div class="card-body">
                     <h2>{{ __('Laravel Practice tasks') }}</h2>
                     <ul class="list-group">
-                        <li class="list-group-item">Task 1: User Management Application
+                        <li class="list-group-item">Task 1: Dashboard for Admin
+                        <br>
+                        <p>Dashboard and Chart of Users. </p>
+                        </li>
+                        <li class="list-group-item">Task 2: User Management Application
                         <br>
                         <p>Admin can manage, search, sort, change status, bulk-actions over users data. </p>
                         </li>
-                        <li class="list-group-item">Task 2: Data To Excel And PDF Files
+                        <li class="list-group-item">Task 3: Data To Excel And PDF Files
                         <br>
                         <p>Admin can download data of users in PDF and Excel formats. </p>
                         </li>
                         
-                        <li class="list-group-item">Task 3: Ticker Genration application
+                        <li class="list-group-item">Task 4: Ticker Genration application
                         <br>
                         <p>User can genrate tickets, While Adin can review and comment or close the tickets. </p>
                         </li>    
