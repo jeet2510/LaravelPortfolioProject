@@ -6,6 +6,7 @@ use App\Http\Controllers\GoogleSocialiteController;
 use App\Http\Controllers\CommentsController;
 use App\Http\Controllers\Data\DataOperationController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\StripeController;
 use App\Http\Controllers\TicketsController;
 use Illuminate\Support\Facades\Route;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
@@ -57,6 +58,9 @@ Route::get('/data-operation', [DataOperationController::class, 'index'])->name('
 Route::get('/user-excel-download', [DataOperationController::class, 'get_user_data'])->name('users.excel');
 Route::get('/user-pdf-download', [DataOperationController::class, 'createPDF'])->name('users.pdf');
 });
+Route::post('/stripe-payment', [StripeController::class, 'handlePost'])->name('stripe.payment');
+Route::get('/stripe-payment', [StripeController::class, 'handleGet'])->name('stripe');
+Route::get('/stripe-paymentlist', [StripeController::class, 'listOfPayments'])->name('stripe.list');
 
 Route::get('/new-ticket', [TicketsController::class, 'create'])->name('create.ticket');
 Route::post('/new-ticket', [TicketsController::class, 'store'])->name('store.ticket');
@@ -66,4 +70,3 @@ Route::post('/comment', [CommentsController::class, 'postComment'])->name('post.
 
 Route::get('auth/google', [GoogleSocialiteController::class, 'redirectToGoogle']);
 Route::get('callback/google', [GoogleSocialiteController::class, 'handleCallback']);
-

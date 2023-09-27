@@ -21,6 +21,11 @@
                                 Ticket Requests
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('stripe.list')}}">
+                                List of Payment
+                            </a>
+                        </li>
                         <!-- Add more sidebar items as needed -->
                     </ul>
                 </div>
