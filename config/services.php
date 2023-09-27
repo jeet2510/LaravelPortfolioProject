@@ -34,6 +34,12 @@ return [
     'mailjet' => [
         'key' => env('MAILJET_APIKEY'),
         'secret' => env('MAILJET_APISECRET'),
-    ]
+    ],
+
+    'google' => [
+        'client_id' => '455961021555-nfv9tmuq9e3h3nfk0sqh710fkbu730jv.apps.googleusercontent.com',
+        'client_secret' => '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',
+        'redirect' => 'http://127.0.0.1:8000/callback/google',
+    ], 
 
 ];

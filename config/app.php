@@ -171,6 +171,7 @@ return [
         Maatwebsite\Excel\ExcelServiceProvider::class,
         Barryvdh\DomPDF\ServiceProvider::class,
         Mailjet\LaravelMailjet\MailjetServiceProvider::class,
+        Laravel\Socialite\SocialiteServiceProvider::class,
     ])->toArray(),
 
     /*
@@ -189,6 +190,7 @@ return [
         'Excel' => Maatwebsite\Excel\Facades\Excel::class,
         'Pdf' => Barryvdh\DomPDF\ServiceProvider::class,
         'Mailjet' => Mailjet\LaravelMailjet\Facades\Mailjet::class,
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
     ])->toArray(),
 
 ];

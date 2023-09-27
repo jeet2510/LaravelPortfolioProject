@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminDashboard\DashboardController;
 use App\Http\Controllers\AdminDashboard\UsersController;
+use App\Http\Controllers\GoogleSocialiteController;
 use App\Http\Controllers\CommentsController;
 use App\Http\Controllers\Data\DataOperationController;
 use App\Http\Controllers\HomeController;
@@ -62,3 +63,7 @@ Route::post('/new-ticket', [TicketsController::class, 'store'])->name('store.tic
 Route::get('/tickets/{ticket_id}', [TicketsController::class, 'show'])->name('get.ticket');
 Route::post('/my_tickets', [TicketsController::class, 'userTickets'])->name('user.ticket');
 Route::post('/comment', [CommentsController::class, 'postComment'])->name('post.comment');
+
+Route::get('auth/google', [GoogleSocialiteController::class, 'redirectToGoogle']);
+Route::get('callback/google', [GoogleSocialiteController::class, 'handleCallback']);
+
