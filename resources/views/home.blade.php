@@ -38,7 +38,7 @@
         </form>
         <div>
         <a href="{{ route('create.ticket') }}" class="btn btn-success mt-3">Want to Request Ticket?</a>
-        <a href="{{ route('stripe') }}" class="btn btn-success mt-3">Steipe Payment Testing</a>
+        <a href="{{ route('stripe') }}" class="btn btn-success mt-3">Stripe Payment Testing</a>
         </div>
     </div>
 @endsection
