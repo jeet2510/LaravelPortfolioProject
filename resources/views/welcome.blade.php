@@ -28,7 +28,15 @@
                         <li class="list-group-item">Projects 4: Ticker Genration application
                         <br>
                         <p>User can genrate tickets, While Adin can review and comment or close the tickets. </p>
-                        </li>    
+                        </li>   
+                        <li class="list-group-item">Projects 5: Login using Google Account
+                        <br>
+                        <p>I have intgrated Google Login API, so user can login using therin google account. </p>
+                        </li>  
+                        <li class="list-group-item">Projects 6: Stripe API Integration
+                        <br>
+                        <p>Make payment gateway using STRIPE. User can pay amount, Admin can view the history of payment. </p>
+                        </li>   
                         <!-- Add more tasks as needed -->
                     </ul>
                 </div>
