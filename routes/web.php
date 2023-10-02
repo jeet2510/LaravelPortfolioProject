@@ -10,7 +10,7 @@ use App\Http\Controllers\StripeController;
 use App\Http\Controllers\TicketsController;
 use Illuminate\Support\Facades\Route;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
-
+dd('here');
 /*
 |--------------------------------------------------------------------------
 | Web Routes
