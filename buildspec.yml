@@ -12,7 +12,7 @@ phases:
       - apt-get install -y libpq-dev libzip-dev php-pgsql
   pre_build:
     commands:
-      - composer install  # Changed to 'composer install' instead of 'composer update'
+      - composer update  # Changed to 'composer install' instead of 'composer update'
       - npm install
       - npm run build
 artifacts:
