@@ -9,11 +9,10 @@ phases:
       - curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
       - apt-get install -y libpq-dev libzip-dev
       - apt-get install -y php-pgsql
-      - curl -sS https://getcomposer.org/installer -o composer-setup.php 
-      - php composer-setup.php --install-dir=/usr/local/bin --filename=composer
   pre_build:
     commands:
-      - composer update
+      - php composer-setup.php --install-dir=/usr/local/bin --filename=composer  # Move this to pre_build phase
+      - composer install  # Changed to 'composer install' instead of 'composer update'
       - npm install
 artifacts:
   files:
