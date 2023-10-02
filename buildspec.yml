@@ -14,6 +14,7 @@ phases:
     commands:
       - composer update  # Changed to 'composer install' instead of 'composer update'
       - npm install
+      - npm run build
 artifacts:
   files:
     - '**/*'
