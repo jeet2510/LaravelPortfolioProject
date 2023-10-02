@@ -6,12 +6,12 @@ phases:
       php: 8.0
     commands:
       - apt-get update -y
-      - curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-      - apt-get install -y libpq-dev libzip-dev
-      - apt-get install -y php-pgsql
+      - apt-get install -y curl php-cli php-mbstring unzip
+      - curl -sS https://getcomposer.org/installer -o composer-setup.php
+      - php composer-setup.php --install-dir=/usr/local/bin --filename=composer
+      - apt-get install -y libpq-dev libzip-dev php-pgsql
   pre_build:
     commands:
-      - php composer-setup.php --install-dir=/usr/local/bin --filename=composer  # Move this to pre_build phase
       - composer install  # Changed to 'composer install' instead of 'composer update'
       - npm install
 artifacts:
